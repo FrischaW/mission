@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Birthday Pixel Web</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="app">
+    <!-- ===== Screen 1: Start ===== -->
+    <section id="start" class="screen active">
+      <h2>Good morning,</h2>
+      <h2>Birthday girl!</h2>
+
+      <div class="sprite">
+        <img src="pixel mei.png" alt="Hi MEI" />
+      </div>
+
+      <div class="tag">Hi Mei, 
+        <h1></h1>ciye udah 20 thn</div>
+      <div style="margin-top:14px">
+        <button class="btn" data-goto="menu">Start</button>
+      </div>
+      <div class="ground"></div>
+    </section>
+
+    <!-- ===== Screen 2: Menu ===== -->
+    <section id="menu" class="screen">
+      <h1 class="title">HAPPY<br>BIRTHDAY<br>HI</h1>
+      <div class="menu">
+        <button class="btn" id="giftBtn">B’day Gift</button>
+        <button class="btn" data-goto="card">B’day Cards</button>
+      </div>
+      <button class="btn" data-goto="card">Next</button>
+      <div class="ground"></div>
+    </section>
+
+    <!-- ===== Screen 3: Pesan dari Chaca ===== -->
+    <section id="card" class="screen">
+      <h2>Pesan dari Frischa!</h2>
+
+      <div class="sprite">
+        <img src="pixel chaca.png" alt="Chaca" />
+      </div>
+
+      <button class="btn block" id="readBtn">Baca</button>
+      <div class="ground"></div>
+    </section>
+  </main>
+
+  <!-- ===== Modal Pesan ===== -->
+  <div class="overlay" id="overlay" role="dialog" aria-modal="true" aria-labelledby="msgTitle">
+    <div class="card">
+      <h3 id="msgTitle">Untuk Meifha </h3>
+      <div class="msg" id="message"></div>
+      <div class="muted" id="progress"></div>
+      <div class="row">
+        <button class="btn" id="closeMsg">Tutup</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast untuk pesan singkat -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
